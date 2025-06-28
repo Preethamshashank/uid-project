@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Rankings - CricRaze</title>
+    <link rel="stylesheet" href="rankings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>CricRaze</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="cricraze.html">Home</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="shopping.html">Shopping</a></li>
+                <li><a href="rankings.html" class="active">Rankings</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Rankings Header -->
+    <header class="rankings-header">
+        <h1>ICC Cricket Rankings</h1>
+        <p>Latest International Cricket Rankings</p>
+    </header>
+
+    <!-- Format Selector -->
+    <div class="format-selector">
+        <button class="format-btn active" data-format="test">Test</button>
+        <button class="format-btn" data-format="odi">ODI</button>
+        <button class="format-btn" data-format="t20">T20I</button>
+    </div>
+
+    <!-- Category Selector -->
+    <div class="category-selector">
+        <button class="category-btn active" data-category="teams">Teams</button>
+        <button class="category-btn" data-category="batting">Batting</button>
+        <button class="category-btn" data-category="bowling">Bowling</button>
+        <button class="category-btn" data-category="allrounder">All-Rounders</button>
+    </div>
+
+    <!-- Rankings Content -->
+    <main class="rankings-container">
+        <!-- Test Rankings -->
+        <section id="test-rankings" class="rankings-section active">
+            <!-- Teams -->
+            <div class="rankings-table teams-table active">
+                <h2>Test Team Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="India flag" class="team-flag">
+                                India
+                            </td>
+                            <td>121</td>
+                            <td>3,534</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="Australia flag" class="team-flag">
+                                Australia
+                            </td>
+                            <td>116</td>
+                            <td>3,342</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="England flag" class="team-flag">
+                                England
+                            </td>
+                            <td>111</td>
+                            <td>3,196</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Batting -->
+            <div class="rankings-table batting-table">
+                <h2>Test Batting Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Joe Root</td>
+                            <td>England</td>
+                            <td>895</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Harry Brook</td>
+                            <td>England</td>
+                            <td>876</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Kane Williamson</td>
+                            <td>New Zealand</td>
+                            <td>867</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bowling -->
+            <div class="rankings-table bowling-table">
+                <h2>Test Bowling Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Jasprit Bumrah</td>
+                            <td>India</td>
+                            <td>908</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Kagiso Rabada</td>
+                            <td>South Africa</td>
+                            <td>837</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Pat Cummins</td>
+                            <td>Australia</td>
+                            <td>824</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- All-Rounders -->
+            <div class="rankings-table allrounder-table">
+                <h2>Test All-Rounder Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Ravindra Jadeja</td>
+                            <td>India</td>
+                            <td>400</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Mehidy Hasan Miraz</td>
+                            <td>Bangladesh</td>
+                            <td>327</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Marco Jansen</td>
+                            <td>South Africa</td>
+                            <td>294</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ODI Rankings -->
+        <section id="odi-rankings" class="rankings-section">
+            <!-- Teams -->
+            <div class="rankings-table teams-table active">
+                <h2>ODI Team Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="Australia flag" class="team-flag">
+                                Australia
+                            </td>
+                            <td>121</td>
+                            <td>3,534</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="India flag" class="team-flag">
+                                India
+                            </td>
+                            <td>116</td>
+                            <td>3,342</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="South Africa flag" class="team-flag">
+                                South Africa
+                            </td>
+                            <td>111</td>
+                            <td>3,196</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Batting -->
+            <div class="rankings-table batting-table">
+                <h2>ODI Batting Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Shubman Gill</td>
+                            <td>India</td>
+                            <td>784</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Babar Azam</td>
+                            <td>Pakistan</td>
+                            <td>766</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Rohit Sharma</td>
+                            <td>India</td>
+                            <td>756</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bowling -->
+            <div class="rankings-table bowling-table">
+                <h2>ODI Bowling Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Maheesh Theekshana</td>
+                            <td>Sri Lanka</td>
+                            <td>680</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Kuldeep Yadav</td>
+                            <td>India</td>
+                            <td>650</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Keshav Maharaj</td>
+                            <td>South Africa</td>
+                            <td>648</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- All-Rounders -->
+            <div class="rankings-table allrounder-table">
+                <h2>ODI All-Rounder Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Azmatullah Omarzai</td>
+                            <td>Afghanistan</td>
+                            <td>296</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Mohammad Nabi</td>
+                            <td>Afghanistan</td>
+                            <td>292</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Sikandar Raza</td>
+                            <td>Zimbabwe</td>
+                            <td>290</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- T20I Rankings -->
+        <section id="t20-rankings" class="rankings-section">
+            <!-- Teams -->
+            <div class="rankings-table teams-table active">
+                <h2>T20I Team Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="India flag" class="team-flag">
+                                India
+                            </td>
+                            <td>271</td>
+                            <td>15,425</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="Australia flag" class="team-flag">
+                                Australia
+                            </td>
+                            <td>262</td>
+                            <td>7,593</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>
+                                <img src="https://via.placeholder.com/30" alt="England flag" class="team-flag">
+                                England
+                            </td>
+                            <td>254</td>
+                            <td>9,402</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Batting -->
+            <div class="rankings-table batting-table">
+                <h2>T20I Batting Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Travis Head</td>
+                            <td>Australia</td>
+                            <td>856</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Abhishek Sharma</td>
+                            <td>India</td>
+                            <td>829</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Phil Salt</td>
+                            <td>England</td>
+                            <td>815</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bowling -->
+            <div class="rankings-table bowling-table">
+                <h2>T20I Bowling Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Jacob Duffy</td>
+                            <td>New Zealand</td>
+                            <td>723</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Akeal Hosein</td>
+                            <td>West Indies</td>
+                            <td>707</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Varun Chakaravarthy</td>
+                            <td>India</td>
+                            <td>706</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- All-Rounders -->
+            <div class="rankings-table allrounder-table">
+                <h2>T20I All-Rounder Rankings</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top-rank">
+                            <td>1</td>
+                            <td>Hardik Pandya</td>
+                            <td>India</td>
+                            <td>252</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>2</td>
+                            <td>Marcus Stoinis</td>
+                            <td>Australia</td>
+                            <td>210</td>
+                        </tr>
+                        <tr class="top-rank">
+                            <td>3</td>
+                            <td>Liam Livingstone</td>
+                            <td>England</td>
+                            <td>209</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CricRaze. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="rankings.js"></script>
+</body>
+</html> 

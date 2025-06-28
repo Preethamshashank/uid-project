@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Shop - CricRaze</title>
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>CricRaze</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="cricraze.html">Home</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="shopping.html" class="active">Shopping</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li>
+                    <a href="#" id="cart-btn" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Shopping Header -->
+    <header class="shopping-header">
+        <h1>Cricket Shop</h1>
+        <p>Official Cricket Equipment and Merchandise</p>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section">
+        <div class="search-container">
+            <input type="text" id="search-products" placeholder="Search products...">
+        </div>
+        <div class="filter-container">
+            <select id="price-filter">
+                <option value="all">All Prices</option>
+                <option value="0-50">$0 - $50</option>
+                <option value="51-100">$51 - $100</option>
+                <option value="101-200">$101 - $200</option>
+                <option value="201+">$201+</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="category-tabs">
+        <button class="category-tab active" data-category="all">All</button>
+        <button class="category-tab" data-category="bats">Bats</button>
+        <button class="category-tab" data-category="balls">Balls</button>
+        <button class="category-tab" data-category="protection">Protection</button>
+        <button class="category-tab" data-category="clothing">Clothing</button>
+        <button class="category-tab" data-category="accessories">Accessories</button>
+    </section>
+
+    <!-- Products Container -->
+    <section id="products-container" class="products-section">
+        <!-- Products will be dynamically added here -->
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-amount">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal">
+        <!-- Quick view content will be dynamically added here -->
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CricRaze. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="shopping.js"></script>
+</body>
+</html> 

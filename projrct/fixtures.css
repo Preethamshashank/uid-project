@@ -1,0 +1,560 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #1a472a;    /* Cricket Green */
+    --secondary-color: #2ecc71;  /* Light Green */
+    --accent-color: #27ae60;     /* Medium Green */
+    --text-color: #333;
+    --light-text: #fff;
+    --background-light: #f5f5f5;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --cricket-red: #e63946;      /* Cricket Ball Red */
+    --cricket-brown: #8b4513;    /* Cricket Bat Brown */
+    --cricket-cream: #f5f5dc;    /* Cricket Whites */
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Container */
+.nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo h1 {
+    color: var(--light-text);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+/* Fixtures Page Styles */
+.fixtures-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('fix.png') center/cover no-repeat;
+    padding: 90px 5% 60px; /* Increased top padding to create more space */
+    text-align: center;
+    color: var(--light-text);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* Added margin-top equal to navbar height */
+}
+
+.fixtures-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.fixtures-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.fixtures-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-color);
+    color: var(--light-text);
+}
+
+.month-separator {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    margin: 2rem 0 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.month-separator h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.fixtures-section {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fixtures Table Styles */
+.fixtures-table-container {
+    overflow-x: auto;
+    margin-top: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fixtures-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.fixtures-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.fixtures-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.fixture-row {
+    transition: background-color 0.3s ease;
+}
+
+.fixture-row:hover {
+    background-color: #f8f9fa;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team {
+    font-weight: 500;
+}
+
+.vs {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.match-format {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.match-format.t20 {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.match-format.odi {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.match-format.test {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Reminder Button Styles */
+.reminder-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--primary-color);
+}
+
+.reminder-btn:hover {
+    background-color: rgba(26, 71, 42, 0.1);
+}
+
+.reminder-btn.active {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.reminder-btn.active i {
+    animation: bellRing 1s ease;
+}
+
+@keyframes bellRing {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(15deg); }
+    40% { transform: rotate(-15deg); }
+    50% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2000;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification.success {
+    background: #2ecc71;
+}
+
+.notification.error {
+    background: #e74c3c;
+}
+
+.notification i {
+    font-size: 18px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Month Filter Styles */
+.month-filter {
+    padding: 8px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background: white;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.month-filter:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Format Filters */
+.format-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.format-filter {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.format-filter:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.format-filter.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Unified Action Buttons Styles */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.actions button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions .reminder-btn {
+    color: var(--primary-color);
+}
+
+.actions button:hover {
+    background-color: rgba(26, 71, 42, 0.1);
+    transform: scale(1.1);
+}
+
+.actions button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 3rem 5% 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 0.2rem 0;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 5% 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 5% 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fixtures-header {
+        padding: 100px 5% 40px;
+    }
+
+    .fixtures-header h1 {
+        font-size: 2rem;
+    }
+
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    .fixtures-table-container {
+        margin: 1rem -20px;
+        border-radius: 0;
+    }
+    
+    .date-time, .teams {
+        font-size: 0.9rem;
+    }
+    
+    .actions button {
+        font-size: 1rem;
+    }
+} 
